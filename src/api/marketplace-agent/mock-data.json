@@ -1,0 +1,514 @@
+[
+  {
+    "name": "SANCTUM",
+    "description": "This agent allocates your $SOL to Sanctum LST, then automatically reallocates your fund to maximize yields.",
+    "icon": "https://s3-alpha-sig.figma.com/img/623a/a487/e7d64fcfe89716e2e72baa62a1441af6?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VsdoQWl3hFTXLHgN9IRipMkpoY0SXoCtoGmTlA93R0eIqVFWcqlemOgTm5jPWPJvzTVu8dAXJvuJ22zFq5DggAgQvLJWqSUqs5UdyMKCFu0CQpJ8HjuaF9JJfVvyruPcm8qAIPDiy~UvT3RMewFTP2ZtBRMXAnZ8D4UuYGhHFr6blBhxTQPEp2C~Q2urt8G6uQ8X5Dr3gXe0YjRAjjYSpxpArSggCT122-B4gcDQIM~3MFOSISWCWPcuNAZq4g1FkpgoTFSKi6LRDGmg1XvqVc2Ane2wxWrfOaZQeAHrVxhxQFaop5ZAtlSeMZX~~UigA9m9La2lM1oXqs12pTaSbg__",
+    "required_tools": [
+      {
+        "name": "SANCTUM_ADD_LIQUIDITY",
+        "description": "Add liquidity to Sanctum",
+        "type": "sanctum",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SANCTUM_GET_APY",
+        "description": "Get APY on Sanctum",
+        "type": "sanctum",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SANCTUM_GET_OWNED_LST",
+        "description": "Get owned LST on Sanctum",
+        "type": "sanctum",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SANCTUM_GET_PRICE",
+        "description": "Get price on Sanctum",
+        "type": "sanctum",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SANCTUM_GET_TVL",
+        "description": "Get TVL on Sanctum",
+        "type": "sanctum",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SANCTUM_REMOVE_LIQUIDITY",
+        "description": "Remove liquidity from Sanctum",
+        "type": "sanctum",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SANCTUM_SWAP_LST",
+        "description": "Swap LST on Sanctum",
+        "type": "sanctum",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      }
+    ],
+    "required_mcps": [],
+    "version": "1.0.0",
+    "author": "Yam Yam",
+    "is_active": true,
+    "install_count": 77,
+    "metadata": {}
+  },
+  {
+    "name": "METEORA",
+    "description": "This agent manages your DLMM positions on Meteora, automatically rebalancing and optimizing your liquidity positions for maximum returns.",
+    "icon": "https://www.meteora.ag/icons/logo.svg",
+    "required_tools": [
+      {
+        "name": "METEORA_CLOSE_POSITION",
+        "description": "Close position on Meteora",
+        "type": "meteora",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "METEORA_CREATE_DLMM_BALANCE_POSITION",
+        "description": "Create DLMM balance position on Meteora",
+        "type": "meteora",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "METEORA_CREATE_DLMM_IMBALANCE_POSITION",
+        "description": "Create DLMM imbalance position on Meteora",
+        "type": "meteora",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "METEORA_CREATE_DLMM_ONE_SIDE_POSITION",
+        "description": "Create DLMM one side position on Meteora",
+        "type": "meteora",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "METEORA_GET_DLMM_POOLS",
+        "description": "Fetch DLMM pools on Meteora",
+        "type": "meteora",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "METEORA_GET_LIST_OF_POSITIONS",
+        "description": "Get list of positions on Meteora",
+        "type": "meteora",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      }
+    ],
+    "required_mcps": [],
+    "version": "1.0.0",
+    "author": "Yam Yam",
+    "is_active": true,
+    "install_count": 77,
+    "metadata": {}
+  },
+  {
+    "name": "LULO",
+    "description": "This agent leverages Lulo's advanced trading infrastructure to execute high-frequency trades across multiple DEXs on Solana, optimizing for best execution and minimal slippage.",
+    "icon": "https://app.lulo.fi/favicon.ico",
+    "required_tools": [
+      {
+        "name": "LULO_COMPLETE_WITHDRAWAL_BOOSTED_ONLY",
+        "description": "Complete withdrawal boosted only on Lulo",
+        "type": "lulo",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "LULO_DEPOSIT",
+        "description": "Deposit USDC to Lulo",
+        "type": "lulo",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "LULO_GET_ACCOUNT",
+        "description": "Fetch account information on Lulo",
+        "type": "lulo",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "LULO_GET_POOLS",
+        "description": "Fetch all pools on Lulo",
+        "type": "lulo",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "LULO_GET_RATES",
+        "description": "Fetch rates information on Lulo",
+        "type": "lulo",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "LULO_INITIATE_WITHDRAWAL_BOOSTED_ONLY",
+        "description": "Initiate withdrawal boosted only on Lulo",
+        "type": "lulo",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "LULO_LIST_PENDING_WITHDRAWALS_BOOSTED_ONLY",
+        "description": "List pending withdrawals boosted only on Lulo",
+        "type": "lulo",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "LULO_WITHDRAW_PROTECTED",
+        "description": "Withdraw protected on Lulo",
+        "type": "lulo",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      }
+    ],
+    "required_mcps": [],
+    "version": "1.0.0",
+    "author": "Yam Yam",
+    "is_active": true,
+    "install_count": 77,
+    "metadata": {}
+  },
+  {
+    "name": "SOLAYER",
+    "description": "This agent automatically manages your Solayer positions, optimizing yield across different strategies while maintaining risk parameters and automatically rebalancing based on market conditions.",
+    "icon": "https://framerusercontent.com/images/3A61JZeK4VfgqxHZ6IvQwDGw.png",
+    "required_tools": [
+      {
+        "name": "SOLAYER_GET_INFORMATION",
+        "description": "Get information on Solayer",
+        "type": "solayer",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SOLAYER_STAKE",
+        "description": "Stake on Solayer",
+        "type": "solayer",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      }
+    ],
+    "required_mcps": [],
+    "version": "1.0.0",
+    "author": "Yam Yam",
+    "is_active": true,
+    "install_count": 77,
+    "metadata": {}
+  },
+  {
+    "name": "RAYDIUM LIQUIDITY MANAGER",
+    "description": "This agent manages your Raydium liquidity positions across AMM V4, CLMM, and CPMM pools, automatically optimizing for maximum returns while maintaining balanced exposure.",
+    "icon": "https://raydium.io/favicon.ico",
+    "required_tools": [
+      {
+        "name": "RAYDIUM_CREATE_AMM_V4",
+        "description": "Create AMM v4 on Raydium",
+        "type": "raydium",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "RAYDIUM_CREATE_CLMM",
+        "description": "Create CLMM on Raydium",
+        "type": "raydium",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "RAYDIUM_CREATE_CPMM",
+        "description": "Create CPMM on Raydium",
+        "type": "raydium",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      }
+    ],
+    "required_mcps": [],
+    "version": "1.0.0",
+    "author": "Yam Yam",
+    "is_active": true,
+    "install_count": 77,
+    "metadata": {}
+  },
+  {
+    "name": "SOLANA",
+    "description": "This agent manages your Solana wallet, allowing you to transfer SOL and tokens between accounts, check balances, and manage your Solana assets.",
+    "icon": "https://solana.com/favicon.ico",
+    "required_tools": [
+      {
+        "name": "SOLANA_GET_BALANCE",
+        "description": "Get balance on Solana",
+        "type": "solana",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SOLANA_GET_OWNED_TOKEN",
+        "description": "Get owned token on Solana",
+        "type": "solana",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SOLANA_GET_TOKEN_BALANCE",
+        "description": "Get token balance on Solana",
+        "type": "solana",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SOLANA_TOKEN_TRANSFER",
+        "description": "Transfer token on Solana",
+        "type": "solana",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SOLANA_TRANSFER_SOL",
+        "description": "Transfer SOL on Solana",
+        "type": "solana",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SANCTUM_REMOVE_LIQUIDITY",
+        "description": "Remove liquidity from Sanctum",
+        "type": "sanctum",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "SANCTUM_SWAP_LST",
+        "description": "Swap LST on Sanctum",
+        "type": "sanctum",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      }
+    ],
+    "required_mcps": [],
+    "version": "1.0.0",
+    "author": "Yam Yam",
+    "is_active": true,
+    "install_count": 77,
+    "metadata": {}
+  },
+  {
+    "name": "WORMHOLE",
+    "description": "This agent enables seamless cross-chain operations, allowing you to transfer assets between Solana and other chains, create wrapped tokens, and manage cross-chain positions efficiently.",
+    "icon": "https://wormhole.com/favicon.ico",
+    "required_tools": [
+      {
+        "name": "WORMHOLE_CREATE_WRAPPED_TOKEN",
+        "description": "Create wrapped token on Wormhole",
+        "type": "wormhole",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      },
+      {
+        "name": "WORMHOLE_TRANSFER_TOKEN",
+        "description": "Transfer token on Wormhole",
+        "type": "wormhole",
+        "createdAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "updatedAt": {
+          "$date": "2025-04-05T04:46:14.509Z"
+        },
+        "__v": 0
+      }
+    ],
+    "required_mcps": [],
+    "version": "1.0.0",
+    "author": "Yam Yam",
+    "is_active": true,
+    "install_count": 77,
+    "metadata": {}
+  }
+]
+

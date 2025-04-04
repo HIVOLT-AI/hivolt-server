@@ -1,0 +1,17 @@
+[
+  {
+    "_id": {
+      "$oid": "67ecc171686a042a4a3b0148"
+    },
+    "name": "MyTool",
+    "description": "MyTool Description",
+    "type": "lulo",
+    "createdAt": {
+      "$date": "2025-04-02T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-02T04:46:14.509Z"
+    },
+    "__v": 0
+  }
+]

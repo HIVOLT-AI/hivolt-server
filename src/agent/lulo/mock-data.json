@@ -1,0 +1,98 @@
+[
+  {
+    "name": "LULO_COMPLETE_WITHDRAWAL_BOOSTED_ONLY",
+    "description": "Complete withdrawal boosted only on Lulo",
+    "type": "lulo",
+    "createdAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "LULO_DEPOSIT",
+    "description": "Deposit USDC to Lulo",
+    "type": "lulo",
+    "createdAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "LULO_GET_ACCOUNT",
+    "description": "Fetch account information on Lulo",
+    "type": "lulo",
+    "createdAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "LULO_GET_POOLS",
+    "description": "Fetch all pools on Lulo",
+    "type": "lulo",
+    "createdAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "LULO_GET_RATES",
+    "description": "Fetch rates information on Lulo",
+    "type": "lulo",
+    "createdAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "LULO_INITIATE_WITHDRAWAL_BOOSTED_ONLY",
+    "description": "Initiate withdrawal boosted only on Lulo",
+    "type": "lulo",
+    "createdAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "LULO_LIST_PENDING_WITHDRAWALS_BOOSTED_ONLY",
+    "description": "List pending withdrawals boosted only on Lulo",
+    "type": "lulo",
+    "createdAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "LULO_WITHDRAW_PROTECTED",
+    "description": "Withdraw protected on Lulo",
+    "type": "lulo",
+    "createdAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "__v": 0
+  }
+]

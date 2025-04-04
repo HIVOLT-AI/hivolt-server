@@ -1,0 +1,38 @@
+[
+  {
+    "name": "RAYDIUM_CREATE_AMM_V4",
+    "description": "Create AMM v4 on Raydium",
+    "type": "raydium",
+    "createdAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "RAYDIUM_CREATE_CLMM",
+    "description": "Create CLMM on Raydium",
+    "type": "raydium",
+    "createdAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "RAYDIUM_CREATE_CPMM",
+    "description": "Create CPMM on Raydium",
+    "type": "raydium",
+    "createdAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-05T04:46:14.509Z"
+    },
+    "__v": 0
+  }
+]
