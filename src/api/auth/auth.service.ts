@@ -15,19 +15,6 @@ export class AuthService {
 
   async login(data: CreateUserDto) {
     try {
-      const encodedMessage = new TextEncoder().encode(data.message);
-      const publicKey = new PublicKey(data.address).toBytes();
-
-      const isValid = nacl.sign.detached.verify(
-        encodedMessage,
-        data.signature,
-        publicKey,
-      );
-
-      if (!isValid) {
-        throw new Error('Invalid signature');
-      }
-
       const user = await this.authModel.findOne({ address: data.address });
 
       if (user) {

@@ -6,14 +6,4 @@ export class CreateUserDto {
   @IsNotEmpty()
   @IsString()
   address: string;
-
-  @ApiProperty()
-  @IsNotEmpty()
-  @IsString()
-  signature: Uint8Array;
-
-  @ApiProperty()
-  @IsNotEmpty()
-  @IsString()
-  message: string;
 }
