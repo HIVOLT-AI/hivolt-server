@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  Headers,
   Param,
   Post,
   Put,
@@ -22,8 +23,8 @@ export class AgentController {
   constructor(private readonly agentService: AgentService) {}
 
   @Get('')
-  async list() {
-    return await this.agentService.list();
+  async list(@Headers('x-owner-id') ownerId: string) {
+    return await this.agentService.list(ownerId);
   }
 
   @Get(':id')
@@ -47,7 +48,7 @@ export class AgentController {
   }
 
   @Put(':id/update-status')
-  async update_status(@Body() data: UpdateStatusDto, @Param('id') id: string) {
-    return this.agentService.update_status(data, id);
+  async update_status(@Headers('x-owner-id') ownerId: string, @Body() data: UpdateStatusDto, @Param('id') id: string) {
+    return this.agentService.update_status(ownerId, data, id);
   }
 }

@@ -20,8 +20,8 @@ export class AgentService {
     private readonly transactionLogModel: Model<TransactionLog>,
   ) {}
 
-  async list() {
-    return await this.agentModel.find();
+  async list(ownerId: string) {
+    return await this.agentModel.find({ owner_id: ownerId });
   }
 
   async get_detail(id: string) {
@@ -74,9 +74,12 @@ export class AgentService {
     return agent;
   }
 
-  async update_status(data: UpdateStatusDto, id: string) {
+  async update_status(ownerId: string, data: UpdateStatusDto, id: string) {
     const agent = await this.agentModel.findById(id);
     if (!agent) {
+      throw new Error('Agent not found');
+    }
+    if (agent.owner_id !== ownerId) {
       throw new Error('Agent not found');
     }
     agent.status = data.status;
