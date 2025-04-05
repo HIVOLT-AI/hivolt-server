@@ -3,8 +3,6 @@ import { Model } from 'mongoose';
 import { User } from 'src/schema/user.schema';
 import { CreateUserDto } from 'src/api/auth/auth.dto';
 import { InjectModel } from '@nestjs/mongoose';
-import nacl from 'tweetnacl';
-import { PublicKey } from '@solana/web3.js';
 
 @Injectable()
 export class AuthService {
