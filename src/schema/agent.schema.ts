@@ -9,6 +9,9 @@ export type AgentDocument = Agent & mongoose.Document;
 
 @Schema({ timestamps: true })
 export class Agent {
+  @Prop({ required: true, unique: true })
+  id: string;
+
   @Prop({ required: true })
   name: string;
 

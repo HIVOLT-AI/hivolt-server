@@ -23,24 +23,16 @@ export class CreateAgentDto {
 export class DeleteAgentDto {
   @IsNotEmpty()
   @IsString()
-  agent_id: string;
+  id: string;
 }
 
 export class AddToolDto {
-  @IsNotEmpty()
-  @IsString()
-  agent_id: string;
-
   @IsNotEmpty()
   @IsArray()
   tools: Tool[];
 }
 
 export class UpdateStatusDto {
-  @IsNotEmpty()
-  @IsString()
-  agent_id: string;
-
   @IsNotEmpty()
   @IsString()
   status: AgentStatus;

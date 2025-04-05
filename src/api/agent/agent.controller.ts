@@ -21,33 +21,33 @@ import {
 export class AgentController {
   constructor(private readonly agentService: AgentService) {}
 
-  @Get('list')
+  @Get('')
   async list() {
     return await this.agentService.list();
   }
 
   @Get(':id')
-  async get_detail(@Param('agent_id') agent_id: string) {
-    return await this.agentService.get_detail(agent_id);
+  async get_detail(@Param('id') id: string) {
+    return await this.agentService.get_detail(id);
   }
 
-  @Post('create')
+  @Post('')
   async login(@Body() data: CreateAgentDto) {
     return this.agentService.create(data);
   }
 
-  @Delete('delete')
-  async delete(@Body() data: DeleteAgentDto) {
-    return this.agentService.delete(data);
+  @Delete(':id')
+  async delete(@Param('id') id: string) {
+    return this.agentService.delete(id);
   }
 
-  @Put('add-tool')
-  async add_tool(@Body() data: AddToolDto) {
-    return this.agentService.add_tool(data);
+  @Put(':id/add-tool')
+  async add_tool(@Body() data: AddToolDto, @Param('id') id: string) {
+    return this.agentService.add_tool(data, id);
   }
 
-  @Put('update-status')
-  async update_status(@Body() data: UpdateStatusDto) {
-    return this.agentService.update_status(data);
+  @Put(':id/update-status')
+  async update_status(@Body() data: UpdateStatusDto, @Param('id') id: string) {
+    return this.agentService.update_status(data, id);
   }
 }

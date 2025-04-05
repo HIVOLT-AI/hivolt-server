@@ -42,12 +42,12 @@ export class AgentService {
     return agent;
   }
 
-  async delete(data: DeleteAgentDto) {
-    await this.agentModel.findByIdAndDelete(data.agent_id);
+  async delete(id: string) {
+    await this.agentModel.findByIdAndDelete(id);
   }
 
-  async add_tool(data: AddToolDto) {
-    const agent = await this.agentModel.findById(data.agent_id);
+  async add_tool(data: AddToolDto, id: string) {
+    const agent = await this.agentModel.findById(id);
     if (!agent) {
       throw new Error('Agent not found');
     }
@@ -56,8 +56,8 @@ export class AgentService {
     return agent;
   }
 
-  async update_status(data: UpdateStatusDto) {
-    const agent = await this.agentModel.findById(data.agent_id);
+  async update_status(data: UpdateStatusDto, id: string) {
+    const agent = await this.agentModel.findById(id);
     if (!agent) {
       throw new Error('Agent not found');
     }
