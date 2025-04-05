@@ -15,6 +15,7 @@ import { LoggerMiddleware } from 'src/shared/middleware/logger.middleware';
 import { ToolModule } from 'src/api/tool/tool.module';
 import { McpModule } from 'src/api/mcp/mcp.module';
 import { MarketplaceAgentModule } from './api/marketplace-agent/marketplace-agent.module';
+import { SavedAgentModule } from './api/saved-agent/saved-agent.module';
 
 @Module({
   imports: [
@@ -38,6 +39,7 @@ import { MarketplaceAgentModule } from './api/marketplace-agent/marketplace-agen
     ToolModule,
     McpModule,
     MarketplaceAgentModule,
+    SavedAgentModule,
   ],
   controllers: [AppController],
   providers: [
