@@ -28,12 +28,18 @@ export class AuthService {
         throw new Error('Invalid signature');
       }
 
-      const user = await this.authModel.create({
+      const user = await this.authModel.findOne({ address: data.address });
+
+      if (user) {
+        return user;
+      }
+
+      const newUser = await this.authModel.create({
         name: data.address,
         address: data.address,
       });
 
-      return user;
+      return newUser;
     } catch (error) {
       throw new Error(`Error logging in: ${error.message}`);
     }
