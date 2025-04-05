@@ -16,6 +16,8 @@ import { ToolModule } from 'src/api/tool/tool.module';
 import { McpModule } from 'src/api/mcp/mcp.module';
 import { MarketplaceAgentModule } from './api/marketplace-agent/marketplace-agent.module';
 import { SavedAgentModule } from './api/saved-agent/saved-agent.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -23,6 +25,10 @@ import { SavedAgentModule } from './api/saved-agent/saved-agent.module';
       isGlobal: true,
       envFilePath: `.env`,
       load: [AGENT_ENV, MONGODB_ENV, ACCOUNT_ENV],
+    }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'public'),
+      serveRoot: '/static',
     }),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
