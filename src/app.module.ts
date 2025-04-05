@@ -18,6 +18,7 @@ import { MarketplaceAgentModule } from './api/marketplace-agent/marketplace-agen
 import { SavedAgentModule } from './api/saved-agent/saved-agent.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { TransactionLogModule } from './api/transaction-log/transaction-log.module';
 
 @Module({
   imports: [
@@ -46,6 +47,7 @@ import { join } from 'path';
     McpModule,
     MarketplaceAgentModule,
     SavedAgentModule,
+    TransactionLogModule,
   ],
   controllers: [AppController],
   providers: [

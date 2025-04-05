@@ -1,3 +1,4 @@
+import { ApiProperty } from "@nestjs/swagger";
 import { IsNotEmpty, IsNumber } from "class-validator";
 import { IsString } from "class-validator";
 
@@ -16,28 +17,34 @@ export class GetMarketplaceAgentsDto {
     this.install_count = install_count;
   }
 
+  @ApiProperty()
   @IsNotEmpty()
   @IsString()
   agent_id: string;
 
+  @ApiProperty()
   @IsNotEmpty()
   @IsString()
   agent_name: string;
 
+  @ApiProperty()
   @IsNotEmpty()
   @IsString()
   agent_description: string;
 
+  @ApiProperty()
   @IsNotEmpty()
   @IsString()
   icon: string;
 
+  @ApiProperty()
   @IsNotEmpty()
   @IsNumber()
   install_count: number;
 }
 
 export class SaveMarketplaceAgentDto {
+  @ApiProperty()
   @IsNotEmpty()
   @IsString()
   owner_id: string;
