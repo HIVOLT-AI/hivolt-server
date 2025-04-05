@@ -50,3 +50,9 @@ export class SaveMarketplaceAgentDto {
   owner_id: string;
 }
 
+export class IsSavedDto {
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsString()
+  owner_id: string;
+}

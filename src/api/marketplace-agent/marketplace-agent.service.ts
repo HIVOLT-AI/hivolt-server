@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { MarketplaceAgent } from 'src/schema/marketplace-agent.schema';
-import { GetMarketplaceAgentsDto, SaveMarketplaceAgentDto } from './marketplace-agent.dto';
+import { GetMarketplaceAgentsDto, IsSavedDto, SaveMarketplaceAgentDto } from './marketplace-agent.dto';
 import { SavedAgent } from 'src/schema/saved-agent.schema';
 
 @Injectable()
@@ -53,5 +53,13 @@ export class MarketplaceAgentService {
       status: 'live',
     });
     return newAgent;
+  }
+
+  async is_saved(id: string, data: IsSavedDto) {
+    const savedAgent = await this.savedAgentModel.findOne({
+      agent_id: id,
+      owner_id: data.owner_id,
+    });
+    return savedAgent ? true : false;
   }
 } 
