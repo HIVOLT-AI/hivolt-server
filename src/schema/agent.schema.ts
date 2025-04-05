@@ -19,6 +19,9 @@ export class Agent {
   owner_id: string;
 
   @Prop({ required: true })
+  agent_id: string;
+
+  @Prop({ required: true })
   nav: number;
 
   @Prop({ required: true })

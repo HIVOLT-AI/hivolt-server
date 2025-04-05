@@ -28,14 +28,16 @@ export class AgentService {
   async create(data: CreateAgentDto) {
     const agent = this.agentModel.create({
       name: data.name,
-      address: 'address', // TODO: get address from user
-      owner_id: 'owner_id', // TODO: get owner_id from user
+      address: data.address,
+      owner_id: data.owner_id,
+      agent_id: data.agent_id,
       nav: 0,
       realized_pnl: 0,
       unrealized_pnl: 0,
       total_pnl_percentage: 0,
       status: AgentStatus.paused,
       tools: [],
+      mcps: [],
     });
     return agent;
   }
