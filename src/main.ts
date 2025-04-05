@@ -13,6 +13,14 @@ import { join } from 'path';
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
+  // Enable CORS
+  app.enableCors({
+    origin: process.env.ALLOWED_ORIGINS?.split(',') || '*', // You can specify allowed origins or use '*' for all
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    // credentials: true, // Enable if you need to send cookies or authentication headers
+  });
+
+
   app.useStaticAssets(join(__dirname, '..', 'public'), {
     prefix: '/static',
   });
