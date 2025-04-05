@@ -1,13 +1,13 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { ENV } from 'src/config/env.config';
-import { Client } from '@modelcontextprotocol/sdk/client/index.js';
-import { SSEClientTransport } from '@modelcontextprotocol/sdk/client/sse.js';
 import {
   MessageParam,
   Tool,
 } from '@anthropic-ai/sdk/resources/messages/messages.mjs';
 import { ANTHROPIC_MODEL } from 'src/shared/constants';
 import { ToolArgsType } from 'src/shared/types/tool';
+import { Client } from './../../mcp-client';
+import { SSEClientTransport } from './../../mcp-client/sse';
 
 class MCPClient {
   public isConnected = false;
@@ -27,12 +27,14 @@ class MCPClient {
     });
     this.transport = new SSEClientTransport(new URL(endpoint));
     this.systemPrompt = prompt;
+    console.log(this.transport);
   }
 
   async connect() {
     try {
       this.mcp.connect(this.transport);
       const toolList = await this.mcp.listTools();
+      console.log('Tool List:', toolList);
       this.tools = await Promise.all(
         toolList.tools.map((tool) => {
           return {
@@ -42,14 +44,15 @@ class MCPClient {
           };
         }),
       );
+      console.log('Tools:', this.tools);
       this.isConnected = true;
     } catch (error: any) {
+      console.log('Error connecting to MCP:', error);
       throw new Error(`Failed to connect to MCP: ${error.message}`);
     }
   }
 
   async disconnect() {
-    await this.mcp.close();
     this.isConnected = false;
   }
 

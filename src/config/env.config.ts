@@ -16,6 +16,7 @@ export const ENV_SHAPE = {
   SOLANA_ACCOUNT_PRIVATE_KEY: 'SOLANA_ACCOUNT_PRIVATE_KEY',
   EVM_ACCOUNT_PRIVATE_KEY: 'EVM_ACCOUNT_PRIVATE_KEY',
   LULO_API_KEY: 'LULO_API_KEY',
+  MCP_ENDPOINT_URL: 'MCP_ENDPOINT_URL',
 } as const;
 
 export const ENV_SCHEMA = Joi.object({
@@ -30,6 +31,7 @@ export const ENV_SCHEMA = Joi.object({
   SOLANA_ACCOUNT_PRIVATE_KEY: Joi.string().required(),
   EVM_ACCOUNT_PRIVATE_KEY: Joi.string().required(),
   LULO_API_KEY: Joi.string().required(),
+  MCP_ENDPOINT_URL: Joi.string().uri().required(),
 });
 
 export const ENV = cleanEnv(process.env, {
@@ -44,4 +46,5 @@ export const ENV = cleanEnv(process.env, {
   SOLANA_ACCOUNT_PRIVATE_KEY: str(),
   EVM_ACCOUNT_PRIVATE_KEY: str(),
   LULO_API_KEY: str(),
+  MCP_ENDPOINT_URL: str(),
 });
