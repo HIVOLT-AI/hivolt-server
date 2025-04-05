@@ -28,9 +28,9 @@ export class TransactionLog {
 
   @Prop({ required: true })
   tx_hash: string;
-  
+
   @Prop({ required: true })
-  date: Date;
+  date: string;
 }           
 
 export const TransactionLogSchema = SchemaFactory.createForClass(TransactionLog);
