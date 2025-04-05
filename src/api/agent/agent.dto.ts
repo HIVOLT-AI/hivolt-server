@@ -6,6 +6,18 @@ export class CreateAgentDto {
   @IsNotEmpty()
   @IsString()
   name: string;
+
+  @IsNotEmpty()
+  @IsString()
+  agent_id: string;
+
+  @IsNotEmpty()
+  @IsString()
+  owner_id: string;
+
+  @IsNotEmpty()
+  @IsString()
+  address: string;
 }
 
 export class DeleteAgentDto {
