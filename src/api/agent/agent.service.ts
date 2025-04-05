@@ -33,7 +33,7 @@ export class AgentService {
     const transaction_logs = await this.transactionLogModel.find({
       user_agent_id: id,
       owner_id: user_agent.owner_id,
-    });
+    }).sort({ date: -1 });
 
     return {
       user_agent,
