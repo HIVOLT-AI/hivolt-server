@@ -9,12 +9,15 @@ import {
   UpdateStatusDto,
 } from 'src/api/agent/agent.dto';
 import { AgentStatus } from 'src/shared/types/agent';
+import { TransactionLog } from 'src/schema/transaction-log.schema';
 
 @Injectable()
 export class AgentService {
   constructor(
     @InjectModel('Agent')
     private readonly agentModel: Model<Agent>,
+    @InjectModel('TransactionLog')
+    private readonly transactionLogModel: Model<TransactionLog>,
   ) {}
 
   async list() {
@@ -22,9 +25,21 @@ export class AgentService {
   }
 
   async get_detail(id: string) {
-    return await this.agentModel.findById(id);
-  }
+    const user_agent = await this.agentModel.findById(id);
+    if (!user_agent) {
+      throw new Error('Agent not found');
+    }
 
+    const transaction_logs = await this.transactionLogModel.find({
+      user_agent_id: id,
+      owner_id: user_agent.owner_id,
+    });
+
+    return {
+      user_agent,
+      transaction_logs,
+    };
+  }
   async create(data: CreateAgentDto) {
     const agent = this.agentModel.create({
       name: data.name,
@@ -35,9 +50,12 @@ export class AgentService {
       realized_pnl: 0,
       unrealized_pnl: 0,
       total_pnl_percentage: 0,
+      prompts: data.prompts,
+      icon: data.icon,
       status: AgentStatus.paused,
       tools: [],
       mcps: [],
+      fund_amount: 0,
     });
     return agent;
   }

@@ -18,6 +18,14 @@ export class CreateAgentDto {
   @IsNotEmpty()
   @IsString()
   address: string;
+
+  @IsNotEmpty()
+  @IsString()
+  prompts: string;
+
+  @IsNotEmpty()
+  @IsString()
+  icon: string;
 }
 
 export class DeleteAgentDto {

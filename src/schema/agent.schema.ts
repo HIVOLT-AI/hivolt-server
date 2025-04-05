@@ -9,9 +9,6 @@ export type AgentDocument = Agent & mongoose.Document;
 
 @Schema({ timestamps: true })
 export class Agent {
-  @Prop({ required: true, unique: true })
-  id: string;
-
   @Prop({ required: true })
   name: string;
 
@@ -45,10 +42,10 @@ export class Agent {
   @Prop({ required: true, type: MongooseSchema.Types.Mixed, default: [] })
   mcps: Mcp[];
 
-  @Prop({ required: true, type: String, default: '' })
+  @Prop({ type: String, default: '' })
   prompts: string;
 
-  @Prop({ required: true, type: String, default: '' })
+  @Prop({ type: String, default: '' })
   icon: string;
 
   @Prop({ required: true, type: Number, default: 0 })
