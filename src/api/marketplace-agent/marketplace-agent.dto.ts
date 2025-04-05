@@ -37,3 +37,9 @@ export class GetMarketplaceAgentsDto {
   install_count: number;
 }
 
+export class SaveMarketplaceAgentDto {
+  @IsNotEmpty()
+  @IsString()
+  owner_id: string;
+}
+
