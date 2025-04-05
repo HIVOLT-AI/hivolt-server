@@ -44,6 +44,15 @@ export class Agent {
 
   @Prop({ required: true, type: MongooseSchema.Types.Mixed, default: [] })
   mcps: Mcp[];
+
+  @Prop({ required: true, type: String, default: '' })
+  prompts: string;
+
+  @Prop({ required: true, type: String, default: '' })
+  icon: string;
+
+  @Prop({ required: true, type: Number, default: 0 })
+  fund_amount: number;
 }
 
 export const AgentSchema = SchemaFactory.createForClass(Agent);
