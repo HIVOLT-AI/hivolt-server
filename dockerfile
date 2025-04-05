@@ -10,6 +10,7 @@ RUN npm run build
 FROM node:22-slim
 WORKDIR /app
 COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/public ./public
 COPY package*.json ./
 RUN npm ci --only=production
 CMD ["npm", "run", "start:prod"]
